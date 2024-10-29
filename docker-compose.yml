@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  inferenc:
+    build: ./inference
+    ports:
+      - "5000:5000"
+    depends_on:
+      - feature_extraction
+      - model_serving
+    restart: always
+
+  feature_extraction:
+    build: ./FeatureExtraction
+    ports:
+      - "5001:5001"
+    restart: always
+
+  model_serving:
+    build: ./ModelServing
+    ports:
+      - "5002:5002"
+    restart: always
