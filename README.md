@@ -1,4 +1,4 @@
-## Tech Stack
+## Стек
 
 - 🐍 **Languages**: Python
 - 🚀 **Frameworks**: FastAPI
@@ -22,16 +22,11 @@ curl -X POST http://localhost:5000/process -H "Content-Type: application/json" -
 ```json
 {
   "model1_output": {
-    "_comment": "input_value * 2",
     "result": 10
   },
   "model2_output": {
-    "_comment": "input_value + 10",
-
     "result": 15
   },
-    "_comment": "model1_output + model2_output",
-
   "final_result": 25
 }
 ```
